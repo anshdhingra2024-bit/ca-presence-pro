@@ -171,7 +171,7 @@ with col1:
     """)
 
 with col2:
-    st.image("images/ansh.jpg", width=300)
+    st.image("images/Ansh.jpg", width=300)
     st.markdown("""
     **Ansh**  
      SEO Specialist  
