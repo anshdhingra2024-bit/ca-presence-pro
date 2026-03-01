@@ -6,10 +6,6 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 
-# ---------------- SESSION NAVIGATION ----------------
-if "page" not in st.session_state:
-    st.session_state.page = "home"
-
 # ---------------- LUXURY CSS ----------------
 st.markdown("""
 <style>
@@ -55,19 +51,25 @@ footer {visibility: hidden;}
     font-weight: 700;
 }
 
-/* Button Styling */
-div.stButton > button {
-    background-color: black;
-    color: white;
-    padding: 14px 36px;
-    border-radius: 6px;
-    font-weight: 600;
-    border: none;
+/* Buttons */
+.cta-wrapper {
+    text-align: center;
+    margin-top: 25px;
 }
 
-div.stButton > button:hover {
+.cta-btn {
+    display: inline-block;
+    margin: 8px;
+    padding: 14px 36px;
+    background-color: black;
+    color: white !important;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cta-btn:hover {
     background-color: #333;
-    color: white;
 }
 
 /* Section Title */
@@ -88,6 +90,15 @@ div.stButton > button:hover {
     margin-bottom: 25px;
 }
 
+/* Founder */
+.founder-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
 .contact-box {
     text-align: center;
     font-size: 20px;
@@ -97,113 +108,109 @@ div.stButton > button:hover {
 </style>
 """, unsafe_allow_html=True)
 
-# ================= HOME PAGE =================
-if st.session_state.page == "home":
+# ---------------- NAVBAR ----------------
+st.markdown('<div class="navbar">C&A Presence Pro | Premium Google Maps & Local SEO Agency</div>', unsafe_allow_html=True)
 
-    st.markdown('<div class="navbar">C&A Presence Pro | Premium Google Maps & Local SEO Agency</div>', unsafe_allow_html=True)
+# ---------------- HERO ----------------
+st.markdown('<div class="main-title">C&A Presence Pro</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">Strategic Google Visibility for Local Businesses</div>', unsafe_allow_html=True)
 
-    # Hero
-    st.markdown('<div class="main-title">C&A Presence Pro</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-title">Strategic Google Visibility for Local Businesses</div>', unsafe_allow_html=True)
+st.markdown("""
+<div class="cta-wrapper">
+    <a href="/Blog" class="cta-btn">Read Our Insights</a>
+</div>
+""", unsafe_allow_html=True)
 
-    # Centered Button
-    col1, col2, col3 = st.columns([1,2,1])
-    with col2:
-        if st.button("Read Our Insights", use_container_width=True):
-            st.session_state.page = "blog"
+# ---------------- SERVICES ----------------
+st.markdown('<div class="section-title">Our Services</div>', unsafe_allow_html=True)
 
-    # Services
-    st.markdown('<div class="section-title">Our Services</div>', unsafe_allow_html=True)
-    col1, col2 = st.columns(2)
+col1, col2 = st.columns(2)
 
-    with col1:
-        st.markdown('<div class="card"><h3>Google Business Profile Optimization</h3>Complete listing setup, keyword placement & ranking strategy.</div>', unsafe_allow_html=True)
-        st.markdown('<div class="card"><h3>Local SEO Strategy</h3>Structured city-level SEO to dominate search results.</div>', unsafe_allow_html=True)
+with col1:
+    st.markdown('<div class="card"><h3>Google Business Profile Optimization</h3>Complete listing setup, keyword placement & ranking strategy.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="card"><h3>Local SEO Strategy</h3>Structured city-level SEO to dominate search results.</div>', unsafe_allow_html=True)
 
-    with col2:
-        st.markdown('<div class="card"><h3>Google Maps Top 3 Ranking</h3>Advanced optimization for map visibility & calls.</div>', unsafe_allow_html=True)
-        st.markdown('<div class="card"><h3>Review & Reputation System</h3>Strategic review growth & trust-building framework.</div>', unsafe_allow_html=True)
+with col2:
+    st.markdown('<div class="card"><h3>Google Maps Top 3 Ranking</h3>Advanced optimization for map visibility & calls.</div>', unsafe_allow_html=True)
+    st.markdown('<div class="card"><h3>Review & Reputation System</h3>Strategic review growth & trust-building framework.</div>', unsafe_allow_html=True)
 
-    # Why Choose Us
-    st.markdown('<div class="section-title">Why Choose Us</div>', unsafe_allow_html=True)
+# ---------------- WHY CHOOSE US ----------------
+st.markdown('<div class="section-title">Why Choose Us</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="card">
+✔ Google Certified Expertise <br><br>
+✔ Strong Artificial Engineering Background<br><br>
+✔ Deep Digital Market Understanding<br><br>
+✔ Passionate About Scaling Local Businesses
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- OPTIMIZATION IMPACT ----------------
+st.markdown('<div class="section-title">What Changes After Optimization?</div>', unsafe_allow_html=True)
+
+st.markdown("""
+<div class="card">
+• Higher Google Maps Visibility<br>
+• Increased Calls & Direction Requests<br>
+• Better Profile Authority & Engagement<br>
+• Structured Review Growth<br>
+• Transform Local Presence Into Brand Authority
+</div>
+""", unsafe_allow_html=True)
+
+# ---------------- FOUNDERS ----------------
+st.markdown('<div class="section-title">Meet Founders</div>', unsafe_allow_html=True)
+
+col1, col2 = st.columns(2)
+
+with col1:
+    st.image("images/chaitanya_new.jpg", width=220)
     st.markdown("""
-    <div class="card">
-    ✔ Google Certified Expertise <br><br>
-    ✔ Strong Artificial Engineering Background<br><br>
-    ✔ Deep Digital Market Understanding<br><br>
-    ✔ Passionate About Scaling Local Businesses
-    </div>
-    """, unsafe_allow_html=True)
+    **Chaitanya**  
+    Strategic Growth Director  
 
-    # Founders
-    st.markdown('<div class="section-title">Meet Founders</div>', unsafe_allow_html=True)
-    col1, col2 = st.columns(2)
+    🎓 AIR under 1000 JEE Advance  
+    📜 Google Business Optimization Certified  
+    📊 Specialization: Data Analytics  
+    💡 Expertise: Consumer Psychology
+    """)
 
-    with col1:
-        st.image("images/chaitanya_new.jpg", width=220)
-        st.markdown("""
-        **Chaitanya**  
-        Strategic Growth Director  
-
-        🎓 AIR under 1000 JEE Advance  
-        📜 Google Business Optimization Certified  
-        📊 Specialization: Data Analytics  
-        💡 Expertise: Consumer Psychology
-        """)
-
-    with col2:
-        st.image("images/Ansh.jpg", width=220)
-        st.markdown("""
-        **Ansh**  
-        SEO Specialist  
-
-        🎓 Google Certified Digital Marketing Expert  
-        🚀 Focus: From Local to Brand Growth
-        """)
-
-    # Contact
-    st.markdown('<div class="section-title">Contact Us</div>', unsafe_allow_html=True)
+with col2:
+    st.image("images/Ansh.jpg", width=220)
     st.markdown("""
-    <div class="card contact-box">
-    📍 Serving: Ambala & Yamunanagar<br><br>
-    📞 <a href="tel:+918307762064">Call Ansh - 8307762064</a><br>
-    📞 <a href="tel:+917082429133">Call Chaitanya - 7082429133</a><br><br>
-    💬 WhatsApp Available for Strategy Consultation
-    </div>
-    """, unsafe_allow_html=True)
+    **Ansh**  
+    SEO Specialist  
 
-    st.markdown("---")
-    st.markdown("<center>© 2026 C&A Presence Pro | All Rights Reserved</center>", unsafe_allow_html=True)
+    🎓 Passionate Problem Solver  
+    📜 Google Certified Digital Marketing Expert  
+    🚀 Focus: From Local to Brand Growth
+    """)
 
+# ---------------- CERTIFICATIONS ----------------
+st.markdown("<div class='section-title'>Our Certifications</div>", unsafe_allow_html=True)
 
-# ================= BLOG PAGE =================
-elif st.session_state.page == "blog":
+cert_col1, cert_col2 = st.columns(2)
 
-    st.markdown("<h1 style='text-align:center;'>Our Insights</h1>", unsafe_allow_html=True)
+with cert_col1:
+    st.image("images/ansh_google_ads_search.png", width=260)
+    st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/78dc7f4a-bff3-4c10-b144-311214947346#acc.B8MuhEXc)")
 
-    col1, col2, col3 = st.columns([1,1,1])
-    with col2:
-        if st.button("← Back to Home"):
-            st.session_state.page = "home"
+with cert_col2:
+    st.image("images/ansh_cert2.png", width=260)
+    st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/ae24f46b-5d3f-4c87-aa67-7c1d1d46ddb0)")
 
-    st.markdown("""
-    <div class="card">
-    <h3>How Local Businesses Rank on Google</h3>
-    Discover advanced SEO strategies that increase map visibility,
-    generate calls and dominate local search results.
-    </div>
-    """, unsafe_allow_html=True)
+# ---------------- CONTACT ----------------
+st.markdown('<div class="section-title">Contact Us</div>', unsafe_allow_html=True)
 
-    st.markdown("""
-    <div class="card">
-    <h3>Google Business Profile Optimization Guide</h3>
-    Learn how to structure your listing to attract more high-intent customers.
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown("""
+<div class="card contact-box">
+📍 Serving: Ambala & Yamunanagar<br><br>
+📞 <a href="tel:+918307762064">Call Ansh - 8307762064</a><br>
+📞 <a href="tel:+917082429133">Call Chaitanya - 7082429133</a><br><br>
+💬 WhatsApp Available for Strategy Consultation
+</div>
+""", unsafe_allow_html=True)
 
-    st.markdown("""
-    <div class="card">
-    <h3>SEO vs Google Ads – Strategic Comparison</h3>
-    Understand when to invest in long-term SEO and when ads give faster ROI.
-    </div>
-    """, unsafe_allow_html=True)
+st.markdown("---")
+st.markdown("<center>© 2026 C&A Presence Pro | All Rights Reserved</center>", unsafe_allow_html=True)
