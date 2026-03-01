@@ -51,25 +51,19 @@ footer {visibility: hidden;}
     font-weight: 700;
 }
 
-/* Buttons */
-.cta-wrapper {
-    text-align: center;
-    margin-top: 25px;
-}
-
-.cta-btn {
-    display: inline-block;
-    margin: 8px;
-    padding: 14px 36px;
+/* Streamlit Button Styling */
+div.stButton > button {
     background-color: black;
-    color: white !important;
+    color: white;
+    padding: 14px 36px;
     border-radius: 6px;
-    text-decoration: none;
     font-weight: 600;
+    border: none;
 }
 
-.cta-btn:hover {
+div.stButton > button:hover {
     background-color: #333;
+    color: white;
 }
 
 /* Section Title */
@@ -90,15 +84,6 @@ footer {visibility: hidden;}
     margin-bottom: 25px;
 }
 
-/* Founder */
-.founder-img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
 .contact-box {
     text-align: center;
     font-size: 20px;
@@ -115,11 +100,10 @@ st.markdown('<div class="navbar">C&A Presence Pro | Premium Google Maps & Local 
 st.markdown('<div class="main-title">C&A Presence Pro</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">Strategic Google Visibility for Local Businesses</div>', unsafe_allow_html=True)
 
-st.markdown("""
-<div class="cta-wrapper">
-    <a href="/Blog" class="cta-btn">Read Our Insights</a>
-</div>
-""", unsafe_allow_html=True)
+st.markdown("<div style='text-align:center;'>", unsafe_allow_html=True)
+if st.button("Read Our Insights"):
+    st.switch_page("pages/Blog.py")
+st.markdown("</div>", unsafe_allow_html=True)
 
 # ---------------- SERVICES ----------------
 st.markdown('<div class="section-title">Our Services</div>', unsafe_allow_html=True)
@@ -146,19 +130,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ---------------- OPTIMIZATION IMPACT ----------------
-st.markdown('<div class="section-title">What Changes After Optimization?</div>', unsafe_allow_html=True)
-
-st.markdown("""
-<div class="card">
-• Higher Google Maps Visibility<br>
-• Increased Calls & Direction Requests<br>
-• Better Profile Authority & Engagement<br>
-• Structured Review Growth<br>
-• Transform Local Presence Into Brand Authority
-</div>
-""", unsafe_allow_html=True)
-
 # ---------------- FOUNDERS ----------------
 st.markdown('<div class="section-title">Meet Founders</div>', unsafe_allow_html=True)
 
@@ -177,28 +148,14 @@ with col1:
     """)
 
 with col2:
-    st.image("images/Ansh.jpg", width=290)
+    st.image("images/Ansh.jpg", width=220)
     st.markdown("""
     **Ansh**  
     SEO Specialist  
 
-    🎓 Passionate Problem Solver  
-    📜 Google Certified Digital Marketing Expert  
+    🎓 Google Certified Digital Marketing Expert  
     🚀 Focus: From Local to Brand Growth
     """)
-
-# ---------------- CERTIFICATIONS ----------------
-st.markdown("<div class='section-title'>Our Certifications</div>", unsafe_allow_html=True)
-
-cert_col1, cert_col2 = st.columns(2)
-
-with cert_col1:
-    st.image("images/ansh_google_ads_search.png", width=260)
-    st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/78dc7f4a-bff3-4c10-b144-311214947346#acc.B8MuhEXc)")
-
-with cert_col2:
-    st.image("images/ansh_cert2.png", width=260)
-    st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/ae24f46b-5d3f-4c87-aa67-7c1d1d46ddb0)")
 
 # ---------------- CONTACT ----------------
 st.markdown('<div class="section-title">Contact Us</div>', unsafe_allow_html=True)
