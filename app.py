@@ -159,7 +159,7 @@ st.markdown('<div class="section-title">Meet Founders</div>', unsafe_allow_html=
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("images/chaitanya.jpg", width=300)
+    st.image("images/chaitanya_new.jpg",width=200)
     st.markdown("""
     **Chaitanya**  
     Strategic Growth Director  
@@ -171,7 +171,7 @@ with col1:
     """)
 
 with col2:
-    st.image("images/Ansh.jpg", width=300)
+    st.image("images/Ansh.jpg", width=250)
     st.markdown("""
     **Ansh**  
      SEO Specialist  
@@ -180,6 +180,19 @@ with col2:
     📜 Google Certified Digital Marketer Expert 
     🚀 Focus: From Local to Brand
     """)
+# ---------------- CERTIFICATIONS ----------------
+st.markdown("<div class='section-title'>Our Certifications</div>", unsafe_allow_html=True)
+
+st.markdown("### 🎓 Ansh Certifications")
+cert_col1, cert_col2 = st.columns(2)
+
+with cert_col1:
+    st.image("images/ansh_google_ads_search.png", width=500)
+st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/78dc7f4a-bff3-4c10-b144-311214947346#acc.B8MuhEXc)")
+with cert_col2:
+    st.image("images/ansh_cert2.png", width=500)
+
+st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/ae24f46b-5d3f-4c87-aa67-7c1d1d46ddb0?utm_source=whatsapp&utm_medium=social)")
 
 # ---------------- CONTACT ----------------
 st.markdown('<div class="section-title">Contact Us</div>', unsafe_allow_html=True)
