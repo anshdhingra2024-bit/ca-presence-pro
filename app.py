@@ -16,6 +16,7 @@ st.markdown("""
 
 header {visibility: hidden;}
 footer {visibility: hidden;}
+[data-testid="stSidebar"] {display: none;}
 
 * {
     font-family: 'Georgia', serif;
@@ -36,16 +37,16 @@ footer {visibility: hidden;}
 
 /* Hero */
 .main-title {
-    font-size: 72px;
+    font-size: 64px;
     font-weight: 900;
     text-align: center;
-    margin-top: 90px;
+    margin-top: 80px;
 }
 
 .sub-title {
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     color: #B08A2E;
     font-weight: 700;
 }
@@ -53,13 +54,13 @@ footer {visibility: hidden;}
 /* Buttons */
 .cta-wrapper {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .cta-btn {
     display: inline-block;
     margin: 8px;
-    padding: 14px 40px;
+    padding: 14px 36px;
     background-color: black;
     color: white !important;
     border-radius: 6px;
@@ -73,9 +74,9 @@ footer {visibility: hidden;}
 
 /* Section Title */
 .section-title {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 800;
-    margin-top: 100px;
+    margin-top: 90px;
     margin-bottom: 30px;
     text-align: center;
 }
@@ -83,10 +84,10 @@ footer {visibility: hidden;}
 /* Cards */
 .card {
     background-color: white;
-    padding: 35px;
+    padding: 30px;
     border-radius: 18px;
     box-shadow: 0px 10px 25px rgba(0,0,0,0.05);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* Founder */
@@ -114,6 +115,11 @@ st.markdown('<div class="navbar">C&A Presence Pro | Premium Google Maps & Local 
 st.markdown('<div class="main-title">C&A Presence Pro</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">Strategic Google Visibility for Local Businesses</div>', unsafe_allow_html=True)
 
+st.markdown("""
+<div class="cta-wrapper">
+    <a href="/Blog" class="cta-btn">Read Our Insights</a>
+</div>
+""", unsafe_allow_html=True)
 
 # ---------------- SERVICES ----------------
 st.markdown('<div class="section-title">Our Services</div>', unsafe_allow_html=True)
@@ -135,8 +141,8 @@ st.markdown("""
 <div class="card">
 ✔ Google Certified Expertise <br><br>
 ✔ Strong Artificial Engineering Background<br><br>
-✔ Understand Digital Market  <br><br>
-✔ Passionate About Helping Local Businesses Scale Digitally
+✔ Deep Digital Market Understanding<br><br>
+✔ Passionate About Scaling Local Businesses
 </div>
 """, unsafe_allow_html=True)
 
@@ -149,7 +155,7 @@ st.markdown("""
 • Increased Calls & Direction Requests<br>
 • Better Profile Authority & Engagement<br>
 • Structured Review Growth<br>
-• Local to Brand
+• Transform Local Presence Into Brand Authority
 </div>
 """, unsafe_allow_html=True)
 
@@ -159,40 +165,40 @@ st.markdown('<div class="section-title">Meet Founders</div>', unsafe_allow_html=
 col1, col2 = st.columns(2)
 
 with col1:
-    st.image("images/chaitanya_new.jpg",width=200)
+    st.image("images/chaitanya_new.jpg", width=220)
     st.markdown("""
     **Chaitanya**  
     Strategic Growth Director  
 
-    🎓 AIR under 1000 Jee Advance  
+    🎓 AIR under 1000 JEE Advance  
     📜 Google Business Optimization Certified  
-    📊 Specialization: Data Analytics 
-    💡 Experience: Understanding Psychology
+    📊 Specialization: Data Analytics  
+    💡 Expertise: Consumer Psychology
     """)
 
 with col2:
-    st.image("images/Ansh.jpg", width=250)
+    st.image("images/Ansh.jpg", width=290)
     st.markdown("""
     **Ansh**  
-     SEO Specialist  
+    SEO Specialist  
 
-    🎓 passionate Problem Solver 
-    📜 Google Certified Digital Marketer Expert 
-    🚀 Focus: From Local to Brand
+    🎓 Passionate Problem Solver  
+    📜 Google Certified Digital Marketing Expert  
+    🚀 Focus: From Local to Brand Growth
     """)
+
 # ---------------- CERTIFICATIONS ----------------
 st.markdown("<div class='section-title'>Our Certifications</div>", unsafe_allow_html=True)
 
-st.markdown("### 🎓 Ansh Certifications")
 cert_col1, cert_col2 = st.columns(2)
 
 with cert_col1:
-    st.image("images/ansh_google_ads_search.png", width=500)
-st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/78dc7f4a-bff3-4c10-b144-311214947346#acc.B8MuhEXc)")
-with cert_col2:
-    st.image("images/ansh_cert2.png", width=500)
+    st.image("images/ansh_google_ads_search.png", width=260)
+    st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/78dc7f4a-bff3-4c10-b144-311214947346#acc.B8MuhEXc)")
 
-st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/ae24f46b-5d3f-4c87-aa67-7c1d1d46ddb0?utm_source=whatsapp&utm_medium=social)")
+with cert_col2:
+    st.image("images/ansh_cert2.png", width=260)
+    st.markdown("[🔗 Verify Certificate](https://skillshop.credential.net/ae24f46b-5d3f-4c87-aa67-7c1d1d46ddb0)")
 
 # ---------------- CONTACT ----------------
 st.markdown('<div class="section-title">Contact Us</div>', unsafe_allow_html=True)

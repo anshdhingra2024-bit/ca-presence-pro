@@ -1,49 +1,87 @@
 import streamlit as st
 
-st.set_page_config(page_title="Blog", page_icon="🧠")
+st.set_page_config(page_title="Insights | Elevate Digital", layout="wide")
 
-st.title("🧠 Marketing Insights & Blog")
+# Hide default UI
+st.markdown("""
+<style>
+header {visibility: hidden;}
+footer {visibility: hidden;}
+[data-testid="stSidebar"] {display: none;}
+
+.main-title {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 40px;
+}
+
+.blog-card {
+    background-color: #111111;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: scale(1.02);
+    background-color: #1a1a1a;
+}
+
+.blog-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.blog-desc {
+    font-size: 15px;
+    color: #cccccc;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown('<div class="main-title">Our Insights</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">Expert Knowledge on Google Visibility & Local Growth</div>', unsafe_allow_html=True)
+
+# Blog Posts
+st.markdown("""
+<div class="blog-card">
+    <div class="blog-title">How Local Businesses Can Rank on Google in 2026</div>
+    <div class="blog-desc">
+    Discover proven SEO strategies that help local businesses dominate search results
+    and generate consistent leads without wasting ad budget.
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="blog-card">
+    <div class="blog-title">Google My Business Optimization Guide</div>
+    <div class="blog-desc">
+    Learn how to fully optimize your Google Business Profile to attract more customers
+    and increase trust in your brand.
+    </div>
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div class="blog-card">
+    <div class="blog-title">SEO vs Google Ads – What Should You Choose?</div>
+    <div class="blog-desc">
+    Understand when to invest in SEO and when paid ads are the smarter strategy
+    for faster growth.
+    </div>
+</div>
+""", unsafe_allow_html=True)
 
 st.markdown("---")
-
-st.markdown("## 🚀 How to Reduce Cost Per Lead in Google Ads")
-
-st.write("""
-Many businesses waste 30–50% of their ad budget due to poor targeting and weak strategy.
-
-### 3 Quick Fixes:
-1. Use Exact & Phrase match keywords
-2. Add negative keywords weekly
-3. Improve landing page speed & structure
-""")
-
-st.markdown("---")
-
-st.markdown("## 🎯 5 Mistakes Killing Your Ad Performance")
-
-st.write("""
-1. No proper conversion tracking  
-2. Wrong audience targeting  
-3. Weak ad creatives  
-4. No A/B testing  
-5. No funnel optimization  
-""")
-
-st.markdown("---")
-
-st.markdown("## 📈 Beginner Guide to Meta Ads in 2026")
-
-st.write("""
-Meta Ads success depends on structure:
-
-- Campaign Objective
-- Audience Targeting
-- Creative Testing
-
-Always test at least 3 creatives before scaling.
-""")
-
-st.markdown("---")
-
-st.markdown("### 📩 Want a Free Ad Account Audit?")
-st.markdown("[👉 Book a Free Strategy Call](https://whatsapp.com/dl/)")
+st.markdown("© 2026 Elevate Digital | All Rights Reserved")
